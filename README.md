@@ -95,10 +95,10 @@ $ docker service rm "nomes_dos_servicos"
 
 Primeiro é necessário criar as pastas para salvar os arquivos
 ~~~
-$ mkdir /arquivos/bd
+$ mkdir /srv/bd
 ~~~
 ~~~
-$ mkdir /arquivos/wordpress
+$ mkdir /srv/wordpress
 ~~~
 Criação do arquivo,
 ~~~
@@ -121,7 +121,7 @@ services:
       MYSQL_PASSWORD: examplepass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
 #    volumes:
-#      - /arquivos/bd:/var/lib/mysql
+#      - /srv/bd:/var/lib/mysql
 
   wordpress:
     image: wordpress
@@ -136,7 +136,7 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
 #    volumes:
-#      - /arquivos/wordpress:/var/www/html
+#      - /srv/wordpress:/var/www/html
 ~~~
 Após fechar o vim, execute:
 Para subir o serviço
