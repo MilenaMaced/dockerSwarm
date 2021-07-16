@@ -141,11 +141,11 @@ services:
 Após fechar o vim, execute:
 Para subir o serviço
 ~~~
-docker config deploy -c config.yml wordpress
+docker stack deploy -c config.yml wordpress
 ~~~
 Para listar:
 ~~~
-docker config ps wordpress
+docker stack ps wordpress
 ~~~
 
 
